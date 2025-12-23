@@ -90,48 +90,51 @@ Tujuan: membandingkan performa ketiga model dan membuat demo aplikasi interaktif
 ---
 ### Grafik Loss & Accuracy
 
-<div style="display: flex; justify-content: space-around; align-items: center;">
+<div style="display: flex; justify-content: space-between; align-items: center;">
 
   <div style="text-align: center;">
-    <h4>1️⃣ CNN Base (96x96)</h4>
+    <h4> CNN Base (96x96)</h4>
     <img src="asets/loss_acc_cnn.png.png" alt="Loss & Accuracy CNN Base" width="250"/>
   </div>
 
   <div style="text-align: center;">
-    <h4>2️⃣ EfficientNetB0</h4>
+    <h4>EfficientNetB0</h4>
     <img src="asets/loss_acc_effnet.png.png" alt="Loss & Accuracy EfficientNet" width="250"/>
   </div>
 
   <div style="text-align: center;">
-    <h4>3️⃣ ResNet50</h4>
+    <h4>ResNet50</h4>
     <img src="asets/loss_acc_resnet.png.png" alt="Loss & Accuracy ResNet50" width="250"/>
   </div>
 
 </div>
 
+
 ----
 
 ### Confusion Matrix
+### Confusion Matrix
 
-<div style="display: flex; justify-content: space-around; align-items: center;">
+<div style="display: flex; justify-content: space-between; align-items: center;">
 
   <div style="text-align: center;">
-    <h4>1️⃣ CNN Base (96x96)</h4>
+    <h4> CNN Base (96x96)</h4>
     <img src="asets/confusion_cnn.png.png" alt="Confusion Matrix CNN Base" width="250"/>
   </div>
 
   <div style="text-align: center;">
-    <h4>2️⃣ EfficientNetB0</h4>
+    <h4>EfficientNetB0</h4>
     <img src="asets/confusion_effnet.png.png" alt="Confusion Matrix EfficientNet" width="250"/>
   </div>
 
   <div style="text-align: center;">
-    <h4>3️⃣ ResNet50</h4>
+    <h4>ResNet50</h4>
     <img src="asets/confusion_resnet.png.png" alt="Confusion Matrix ResNet50" width="250"/>
   </div>
 
 </div>
 
+---
 
 ## 🚀 Panduan Menjalankan Sistem Website (Streamlit)
 1. Install dependencies:
