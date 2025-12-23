@@ -210,22 +210,29 @@ Berikut contoh tampilan dashboard saat dijalankan:
 <table>
 <tr>
   <td align="center">
-    <img src="    asets/asets/website (1).png" width="300"/>
+    <img src="asets/aset/website%20(1).png" width="300"/>
     <p>Halaman utama dashboard</p>
   </td>
   <td align="center">
-    <img src="asets/asets/website (2).png" width="300"/>
+    <img src="asets/aset/website%20(2).png" width="300"/>
     <p>Upload gambar & hasil prediksi</p>
   </td>
 </tr>
 </table>
 
 ---
-# 🍎 Fruit Image Classification Web App
 
-**Nama:** Revinda Visma Novatalia 
-**NIM:** 202210370311176
-**Program Studi:** Teknik Informatika - Universitas Muhammadiyah Malang
+## 👤 Biodata
+
+
+**Nama:**  
+Revinda Visma Novatalia  
+
+**NIM:**  
+202210370311176  
+
+**Program Studi:**  
+Teknik Informatika - Universitas Muhammadiyah Malang
 
 
 
