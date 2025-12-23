@@ -1,4 +1,10 @@
 streamlit==1.30.0
+numpy
+pillow
+matplotlib
+scikit-learn
+tflite-runtime
+streamlit==1.30.0
 tensorflow==2.11.0
 numpy
 pillow
