@@ -1,10 +1,9 @@
-tensorflow==2.14.0
+streamlit==1.45.1
+tensorflow==2.20.0
 keras==3.13.0
-numpy>=2.4.0,<3.0
+numpy>=1.25,<1.27
 pandas
 matplotlib
 seaborn
 Pillow
-opencv-python
-streamlit
-pywin32==311
+opencv-python-headless
