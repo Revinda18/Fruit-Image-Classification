@@ -210,11 +210,11 @@ Berikut contoh tampilan dashboard saat dijalankan:
 <table>
 <tr>
   <td align="center">
-    <img src="asets/asets/website(1).png" width="300"/>
+    <img src="    asets/asets/website (1).png" width="300"/>
     <p>Halaman utama dashboard</p>
   </td>
   <td align="center">
-    <img src="asets/asets/website(2).png" width="300"/>
+    <img src="asets/asets/website (2).png" width="300"/>
     <p>Upload gambar & hasil prediksi</p>
   </td>
 </tr>
