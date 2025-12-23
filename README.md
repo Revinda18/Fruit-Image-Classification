@@ -113,26 +113,23 @@ Tujuan: membandingkan performa ketiga model dan membuat demo aplikasi interaktif
 ----
 
 ### Confusion Matrix
-### Confusion Matrix
 
-<div style="display: flex; justify-content: space-between; align-items: center;">
-
-  <div style="text-align: center;">
+<table>
+<tr>
+  <td align="center">
     <h4> CNN Base (96x96)</h4>
-    <img src="asets/confusion_cnn.png.png" alt="Confusion Matrix CNN Base" width="250"/>
-  </div>
-
-  <div style="text-align: center;">
-    <h4>EfficientNetB0</h4>
-    <img src="asets/confusion_effnet.png.png" alt="Confusion Matrix EfficientNet" width="250"/>
-  </div>
-
-  <div style="text-align: center;">
+    <img src="asets/confusion_cnn.png.png" width="250"/>
+  </td>
+  <td align="center">
+    <h4> EfficientNetB0</h4>
+    <img src="asets/confusion_effnet.png.png" width="250"/>
+  </td>
+  <td align="center">
     <h4>ResNet50</h4>
-    <img src="asets/confusion_resnet.png.png" alt="Confusion Matrix ResNet50" width="250"/>
-  </div>
-
-</div>
+    <img src="asets/confusion_resnet.png.png" width="250"/>
+  </td>
+</tr>
+</table>
 
 ---
 
