@@ -1,7 +1,7 @@
 <h1 align="center">Fruit Image Classification 🍎🍌🍇</h1>
 
 <p align="center">
-  <img src="    Fruit-Image-Classification/ asets/fruit_banner.jpg" alt="Fruit Banner" width="400"/>
+  <img src="asets/fruit_banner.jpg" alt="Fruit Banner" width="400"/>
 </p>
 
 ---
