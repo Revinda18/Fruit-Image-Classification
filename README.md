@@ -135,22 +135,24 @@ Tujuan: membandingkan performa ketiga model dan membuat demo aplikasi interaktif
 ## 🚀 Panduan Menjalankan Sistem Website Secara Lokal (Streamlit)
 
 1. **Clone repository:**
+   ```bash
+   git clone https://github.com/username/fruit-image-classification.git
+   cd fruit-image-classification 
+2.  **Buat virtual environment:**
+    ```bash
+    # Windows
+    python -m venv .venv
+    .venv\Scripts\activate
 
-```bash
-git clone https://github.com/username/fruit-image-classification.git
-cd fruit-image-classification
+    # macOS/Linux
+    python3 -m venv .venv
+    source .venv/bin/activate
+3.  **Install dependencies:**
+    ```bash
+    pip install -r requirements.txt
+4.  **Jalankan aplikasi Streamlit:**
+    ```bash
+     streamlit run app.py
 
-2. **Buat virtual environment:**
-# Windows
-python -m venv .venv
-.venv\Scripts\activate
 
-# macOS/Linux
-python3 -m venv .venv
-source .venv/bin/activate
-
-3. Install dependencies:
-pip install -r requirements.txt
-
-4. Jalankan aplikasi Streamlit:
-streamlit run app.py
+---
