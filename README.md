@@ -26,9 +26,45 @@ Tujuan: membandingkan performa ketiga model dan membuat demo aplikasi interaktif
 ---
 
 ## 🧠 Model yang Digunakan
-1. **CNN Base (96x96)** – CNN sederhana tanpa pretrained weights  
-2. **Pretrained Model 1 (EfficientNetB0)** – transfer learning dari ImageNet  
-3. **Pretrained Model 2 (MobileNetV2)** – transfer learning dari ImageNet, fine-tuning beberapa layer terakhir  
+1. CNN Base (96x96)
+   Deskripsi: Convolutional Neural Network sederhana yang dibangun dari awal (from scratch).
+   Arsitektur: Terdiri dari beberapa lapisan Convolution → ReLU → MaxPooling → Flatten → Dense.
+   Input: Gambar diubah ukurannya menjadi 96x96 piksel.
+
+   Kelebihan:
+   - Ringan, cepat dilatih.
+   - Cocok untuk dataset kecil atau sederhana.
+   
+   Kekurangan:
+   - Akurasi terbatas karena tidak memanfaatkan pengetahuan pretrained.
+   - Rentan terhadap variasi gambar dan noise.
+
+2. Pretrained Model 1: EfficientNetB0
+   Deskripsi: Model pretrained yang sudah dilatih pada dataset ImageNet.
+   Transfer Learning: Model ini memanfaatkan bobot awal dari ImageNet dan dilatih ulang (fine-tuning) pada dataset buah.
+   Input: Gambar diubah ukurannya menjadi 224x224 piksel sesuai kebutuhan EfficientNet.
+
+   Kelebihan:
+   - Akurasi lebih tinggi dibanding CNN sederhana.
+   - Lebih efisien dan ringan dibanding model pretrained besar.
+   - Memanfaatkan fitur umum yang sudah dipelajari dari dataset ImageNet.
+   
+   Kekurangan:
+   - Perlu preprocessing sesuai format model pretrained.
+   - Masih bisa overfit jika dataset sangat kecil tanpa augmentasi.
+
+3. Pretrained Model 2: MobileNetV2Deskripsi:
+   Model pretrained yang juga dilatih pada ImageNet, dengan arsitektur ringan dan cepat.
+   Transfer Learning & Fine-Tuning:
+   Hanya beberapa layer terakhir di-fine-tune sesuai dataset buah, sedangkan layer awal tetap mempertahankan bobot pretrained.
+   Input: Gambar diubah ukurannya menjadi 224x224 piksel.
+
+   Kelebihan:
+   - Ringan dan cepat untuk inference, cocok untuk aplikasi web real-time.
+   - Memiliki performa baik pada dataset kecil dan sedang.
+   
+   Kekurangan:
+   - Fine-tuning terbatas → beberapa fitur spesifik mungkin kurang optimal.
 
 ---
 
