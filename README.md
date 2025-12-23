@@ -88,44 +88,50 @@ Tujuan: membandingkan performa ketiga model dan membuat demo aplikasi interaktif
 - Kelemahan: Model besar → training lebih lambat, memerlukan GPU atau resource lebih tinggi
 
 ---
+### Grafik Loss & Accuracy
 
-### ### Grafik Loss & Accuracy
+<div style="display: flex; justify-content: space-around; align-items: center;">
 
-#### 1️⃣ CNN Base (96x96)
-<p align="center">
-  <img src="asets/loss_acc_cnn.png.png" alt="Loss & Accuracy CNN Base" width="600"/>
-</p>
+  <div style="text-align: center;">
+    <h4>1️⃣ CNN Base (96x96)</h4>
+    <img src="asets/loss_acc_cnn.png.png" alt="Loss & Accuracy CNN Base" width="250"/>
+  </div>
 
-#### 2️⃣ Pretrained Model 1 (EfficientNetB0)
-<p align="center">
-  <img src="asets/loss_acc_effnet.png.png" alt="Loss & Accuracy EfficientNet" width="600"/>
-</p>
+  <div style="text-align: center;">
+    <h4>2️⃣ EfficientNetB0</h4>
+    <img src="asets/loss_acc_effnet.png.png" alt="Loss & Accuracy EfficientNet" width="250"/>
+  </div>
 
-#### 3️⃣ Pretrained Model 2 (ResNet50)
-<p align="center">
-  <img src="asets/loss_acc_resnet.png.png" alt="Loss & Accuracy ResNet50" width="600"/>
-</p>
+  <div style="text-align: center;">
+    <h4>3️⃣ ResNet50</h4>
+    <img src="asets/loss_acc_resnet.png.png" alt="Loss & Accuracy ResNet50" width="250"/>
+  </div>
 
----
+</div>
+
+----
 
 ### Confusion Matrix
 
-#### 1️⃣ CNN Base (96x96)
-<p align="center">
-  <img src="asets/confusion_cnn.png.png" alt="Confusion Matrix CNN Base" width="500"/>
-</p>
+<div style="display: flex; justify-content: space-around; align-items: center;">
 
-#### 2️⃣ Pretrained Model 1 (EfficientNetB0)
-<p align="center">
-  <img src="asets/confusion_effnet.png.png" alt="Confusion Matrix EfficientNet" width="500"/>
-</p>
+  <div style="text-align: center;">
+    <h4>1️⃣ CNN Base (96x96)</h4>
+    <img src="asets/confusion_cnn.png.png" alt="Confusion Matrix CNN Base" width="250"/>
+  </div>
 
-#### 3️⃣ Pretrained Model 2 (ResNet50)
-<p align="center">
-  <img src="asets/confusion_resnet.png.png" alt="Confusion Matrix ResNet50" width="500"/>
-</p>
+  <div style="text-align: center;">
+    <h4>2️⃣ EfficientNetB0</h4>
+    <img src="asets/confusion_effnet.png.png" alt="Confusion Matrix EfficientNet" width="250"/>
+  </div>
 
----
+  <div style="text-align: center;">
+    <h4>3️⃣ ResNet50</h4>
+    <img src="asets/confusion_resnet.png.png" alt="Confusion Matrix ResNet50" width="250"/>
+  </div>
+
+</div>
+
 
 ## 🚀 Panduan Menjalankan Sistem Website (Streamlit)
 1. Install dependencies:
