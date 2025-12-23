@@ -1,7 +1,7 @@
 <h1 align="center">Fruit Image Classification 🍎🍌🍇</h1>
 
 <p align="center">
-  <img src="assets/fruit_banner.jpg" alt="Fruit Banner" width="400"/>
+  <img src="asets/fruit_banner.jpg" alt="Fruit Banner" width="400"/>
 </p>
 
 ---
@@ -93,17 +93,17 @@ Tujuan: membandingkan performa ketiga model dan membuat demo aplikasi interaktif
 
 #### 1️⃣ CNN Base (96x96)
 <p align="center">
-  <img src="assets/loss_acc_cnn.png" alt="Loss & Accuracy CNN Base" width="600"/>
+  <img src="asets/loss_acc_cnn.png" alt="Loss & Accuracy CNN Base" width="600"/>
 </p>
 
 #### 2️⃣ Pretrained Model 1 (EfficientNetB0)
 <p align="center">
-  <img src="assets/loss_acc_effnet.png" alt="Loss & Accuracy EfficientNet" width="600"/>
+  <img src="asets/loss_acc_effnet.png" alt="Loss & Accuracy EfficientNet" width="600"/>
 </p>
 
 #### 3️⃣ Pretrained Model 2 (ResNet50)
 <p align="center">
-  <img src="assets/loss_acc_resnet.png" alt="Loss & Accuracy ResNet50" width="600"/>
+  <img src="asets/loss_acc_resnet.png" alt="Loss & Accuracy ResNet50" width="600"/>
 </p>
 
 ---
@@ -112,17 +112,17 @@ Tujuan: membandingkan performa ketiga model dan membuat demo aplikasi interaktif
 
 #### 1️⃣ CNN Base (96x96)
 <p align="center">
-  <img src="assets/confusion_cnn.png" alt="Confusion Matrix CNN Base" width="500"/>
+  <img src="asets/confusion_cnn.png" alt="Confusion Matrix CNN Base" width="500"/>
 </p>
 
 #### 2️⃣ Pretrained Model 1 (EfficientNetB0)
 <p align="center">
-  <img src="assets/confusion_effnet.png" alt="Confusion Matrix EfficientNet" width="500"/>
+  <img src="asets/confusion_effnet.png" alt="Confusion Matrix EfficientNet" width="500"/>
 </p>
 
 #### 3️⃣ Pretrained Model 2 (ResNet50)
 <p align="center">
-  <img src="assets/confusion_resnet.png" alt="Confusion Matrix ResNet50" width="500"/>
+  <img src="asets/confusion_resnet.png" alt="Confusion Matrix ResNet50" width="500"/>
 </p>
 
 ---
