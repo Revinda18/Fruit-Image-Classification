@@ -26,6 +26,7 @@ Tujuan: membandingkan performa ketiga model dan membuat demo aplikasi interaktif
 ---
 
 ## 🧠 Model yang Digunakan
+Aplikasi web interaktif untuk **mengklasifikasikan gambar buah** menggunakan tiga model deep learning: 
 1. CNN Base (96x96)
    Deskripsi: Convolutional Neural Network sederhana yang dibangun dari awal (from scratch).
    Arsitektur: Terdiri dari beberapa lapisan Convolution → ReLU → MaxPooling → Flatten → Dense.
@@ -65,6 +66,8 @@ Tujuan: membandingkan performa ketiga model dan membuat demo aplikasi interaktif
    
    Kekurangan:
    - Fine-tuning terbatas → beberapa fitur spesifik mungkin kurang optimal.
+
+Dibangun dengan **Streamlit**, sehingga mudah dijalankan secara lokal maupun diakses melalui web.
 
 ---
 
@@ -192,3 +195,41 @@ Tujuan: membandingkan performa ketiga model dan membuat demo aplikasi interaktif
 
 
 ---
+
+## 🌐 Live Demo
+
+Aplikasi ini sudah di-deploy secara online dan dapat dicoba melalui link berikut:  
+https://fruit-image-classification-raq749yzbxxknmpnc9gwfl.streamlit.app/
+
+---
+
+## 💻 Tampilan Dashboard Aplikasi
+
+Berikut contoh tampilan dashboard saat dijalankan:
+
+<table>
+<tr>
+  <td align="center">
+    <img src="asets/aset/website(1).png" width="300"/>
+    <p>Halaman utama dashboard</p>
+  </td>
+  <td align="center">
+    <img src="asets/aset/website(2).png" width="300"/>
+    <p>Upload gambar & hasil prediksi</p>
+  </td>
+</tr>
+</table>
+
+---
+# 🍎 Fruit Image Classification Web App
+
+**Nama:** Revinda Visma Novatalia 
+**NIM:** 202210370311176
+**Program Studi:** Teknik Informatika - Universitas Muhammadiyah Malang
+
+
+
+
+
+
+
