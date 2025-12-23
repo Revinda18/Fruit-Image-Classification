@@ -10,7 +10,7 @@
 Proyek ini bertujuan untuk membangun sistem klasifikasi gambar buah menggunakan tiga model:  
 1. **CNN Base (Non-Pretrained)**  
 2. **Pretrained Model 1 (EfficientNetB0)**  
-3. **Pretrained Model 2 (ResNet50)**  
+3. **Pretrained Model 2 (MobileNetV2)**  
 
 Tujuan: membandingkan performa ketiga model dan membuat demo aplikasi interaktif dengan Streamlit.
 
@@ -28,7 +28,7 @@ Tujuan: membandingkan performa ketiga model dan membuat demo aplikasi interaktif
 ## 🧠 Model yang Digunakan
 1. **CNN Base (96x96)** – CNN sederhana tanpa pretrained weights  
 2. **Pretrained Model 1 (EfficientNetB0)** – transfer learning dari ImageNet  
-3. **Pretrained Model 2 (ResNet50)** – transfer learning dari ImageNet, fine-tuning beberapa layer terakhir  
+3. **Pretrained Model 2 (MobileNetV2)** – transfer learning dari ImageNet, fine-tuning beberapa layer terakhir  
 
 ---
 
@@ -45,56 +45,85 @@ Tujuan: membandingkan performa ketiga model dan membuat demo aplikasi interaktif
 | **Accuracy** |         |        | 0.90     | 2129   |
 
 **Analisis:**  
-- Akurasi keseluruhan: 0.90  
-- Recall Apple lebih rendah (0.84) → model kadang salah mengklasifikasikan Apple.  
-- Cocok untuk dataset kecil, training cepat.
+- Akurasi keseluruhan: 0.90 → cukup baik untuk model non-pretrained.
+- Kekuatan: Recall tinggi untuk Strawberry (0.98) → hampir semua Strawberry dikenali.
+- Kelemahan: Recall Apple lebih rendah (0.84) → model kadang salah klasifikasi Apple sebagai buah lain, kemungkinan karena bentuk/motif mirip dengan Grapes atau Orange.
+- Kesimpulan: Model stabil untuk dataset kecil, training cepat, tapi performa beberapa kelas bisa ditingkatkan dengan data augmentation tambahan atau fine-tuning.
 
 ---
 
 ### 2️⃣ Pretrained Model 1 (EfficientNetB0)
 | Class       | Precision | Recall | F1-score | Support |
 |------------|-----------|--------|----------|--------|
-| Apple      | 0.93      | 0.90   | 0.91     | 434    |
-| Banana     | 0.91      | 0.95   | 0.93     | 461    |
-| Grapes     | 0.89      | 0.88   | 0.88     | 434    |
-| Orange     | 0.98      | 0.93   | 0.95     | 394    |
-| Strawberry | 0.94      | 0.99   | 0.96     | 406    |
-| **Accuracy** |         |        | 0.92     | 2129   |
+| Apple      | 0.22     | 0.20   | 0.23     | 434    |
+| Banana     | 0.21      | 0.21   | 0.21     | 461    |
+| Grapes     | 0.21      | 0.20   | 0.21    | 434    |
+| Orange     | 0.20      | 0.20   | 0.20    | 394    |
+| Strawberry | 0.19      | 0.19   | 0.19     | 406    |
+| **Accuracy** |         |        | 0.21     | 2129   |
 
 **Analisis:**  
-- Akurasi meningkat dibanding CNN Base (0.92).  
-- Transfer learning membantu model mengenali fitur buah lebih baik.  
-- F1-score merata di semua kelas.
+- Catatan penting: Nilai precision, recall, dan akurasi sangat rendah (sekitar 0.20), padahal sebelumnya tertulis “akurasinya meningkat dibanding CNN Base”. Ini menunjukkan model gagal belajar atau terjadi kesalahan pelatihan, misal:
+  - Pretrained model belum di-fine-tune dengan dataset kamu
+  - Label atau preprocessing tidak sesuai
+  - Learning rate terlalu tinggi / frozen layers terlalu banyak
+- Kesimpulan: Saat ini, Pretrained Model 1 tidak bekerja dengan baik dan performanya lebih rendah dari CNN Base. Perlu diperiksa ulang pipeline training dan preprocessing.
 
 ---
 
 ### 3️⃣ Pretrained Model 2 (ResNet50)
 | Class       | Precision | Recall | F1-score | Support |
 |------------|-----------|--------|----------|--------|
-| Apple      | 0.94      | 0.92   | 0.93     | 434    |
-| Banana     | 0.92      | 0.96   | 0.94     | 461    |
-| Grapes     | 0.90      | 0.90   | 0.90     | 434    |
-| Orange     | 0.99      | 0.94   | 0.96     | 394    |
-| Strawberry | 0.95      | 0.99   | 0.97     | 406    |
-| **Accuracy** |         |        | 0.94     | 2129   |
+| Apple      | 0.95      | 0.99  | 0.97    | 434    |
+| Banana     | 0.99      | 1.00   | 0.99     | 461    |
+| Grapes     | 0.99      | 0.95   | 0.97     | 434    |
+| Orange     | 0.98      | 0.99   | 0.99     | 394    |
+| Strawberry | 1.00      | 0.99   | 0.99     | 406    |
+| **Accuracy** |         |        | 0.98     | 2129   |
 
 **Analisis:**  
-- Akurasi tertinggi (0.94) dan F1-score terbaik.  
-- Model lebih besar → training lebih lambat tapi performa sangat baik.  
-- Cocok untuk implementasi nyata.
+- Akurasi keseluruhan: 0.98 → model terbaik.
+- Precision & recall sangat tinggi di semua kelas → hampir tidak ada kesalahan klasifikasi.
+- Kelebihan: Cocok untuk implementasi nyata, performa sangat stabil.
+- Kelemahan: Model besar → training lebih lambat, memerlukan GPU atau resource lebih tinggi
 
 ---
 
-### Grafik Loss & Accuracy
-![Loss & Accuracy](notebooks/plots/loss_acc.png)  
-*(Contoh: grafik diambil dari notebook evaluasi)*
+### ### Grafik Loss & Accuracy
+
+#### 1️⃣ CNN Base (96x96)
+<p align="center">
+  <img src="assets/loss_acc_cnn.png" alt="Loss & Accuracy CNN Base" width="600"/>
+</p>
+
+#### 2️⃣ Pretrained Model 1 (EfficientNetB0)
+<p align="center">
+  <img src="assets/loss_acc_effnet.png" alt="Loss & Accuracy EfficientNet" width="600"/>
+</p>
+
+#### 3️⃣ Pretrained Model 2 (ResNet50)
+<p align="center">
+  <img src="assets/loss_acc_resnet.png" alt="Loss & Accuracy ResNet50" width="600"/>
+</p>
 
 ---
 
 ### Confusion Matrix
-![Confusion Matrix CNN Base](notebooks/plots/confusion_cnn.png)  
-![Confusion Matrix Pretrained 1](notebooks/plots/confusion_effnet.png)  
-![Confusion Matrix Pretrained 2](notebooks/plots/confusion_resnet.png)  
+
+#### 1️⃣ CNN Base (96x96)
+<p align="center">
+  <img src="assets/confusion_cnn.png" alt="Confusion Matrix CNN Base" width="500"/>
+</p>
+
+#### 2️⃣ Pretrained Model 1 (EfficientNetB0)
+<p align="center">
+  <img src="assets/confusion_effnet.png" alt="Confusion Matrix EfficientNet" width="500"/>
+</p>
+
+#### 3️⃣ Pretrained Model 2 (ResNet50)
+<p align="center">
+  <img src="assets/confusion_resnet.png" alt="Confusion Matrix ResNet50" width="500"/>
+</p>
 
 ---
 
