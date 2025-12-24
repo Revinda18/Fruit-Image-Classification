@@ -175,7 +175,7 @@ streamlit run app.py
 
 ## 🌐 LIVE DEMO
 
-👉 [https://fruit-image-classification-raq749yzbxxknmpnc9gwfl.streamlit.app/](https://fruit-image-classification-raq749yzbxxknmpnc9gwfl.streamlit.app/)
+👉 [LINK-DASHBOARD_FRUIT_IMAGE_CLASSIFICATION](https://fruit-image-classification-raq749yzbxxknmpnc9gwfl.streamlit.app/)
 
 ---
 
