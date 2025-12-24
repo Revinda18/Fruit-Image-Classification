@@ -6,135 +6,137 @@
 
 ---
 
-## 📌 PROJECT OVERVIEW
+## 📌 DESKRIPSI PROYEK
 
-This repository contains a **Fruit Image Classification** system built using Deep Learning. The project compares the performance of three models:
+Proyek ini bertujuan untuk membangun **sistem klasifikasi gambar buah** menggunakan metode *Deep Learning*.  
+Tiga model digunakan untuk membandingkan performa klasifikasi, yaitu:
 
-1. **CNN Base (Non-Pretrained)**
-2. **EfficientNetB0 (Pretrained)**
-3. **ResNet50 (Pretrained)**
+1. **CNN Base (Non-Pretrained)**  
+2. **Pretrained Model 1 (EfficientNetB0)**  
+3. **Pretrained Model 2 (MobileNetV2)**  
 
-The best-performing model is deployed as an interactive **Streamlit web application** for real-time fruit image classification.
-
----
-
-## 🎯 OBJECTIVES
-
-* Build an image classification model for fruit images
-* Compare non-pretrained and pretrained deep learning models
-* Evaluate model performance using accuracy, precision, recall, and F1-score
-* Deploy an interactive web-based demo using Streamlit
+Model terbaik kemudian diimplementasikan ke dalam **aplikasi web interaktif berbasis Streamlit**.
 
 ---
 
-## 📊 DATASET
+## 🎯 TUJUAN PROYEK
 
-**Classes:**
-
-* Apple
-* Banana
-* Grapes
-* Orange
-* Strawberry
-
-**Preprocessing Steps:**
-
-* Image resizing
-
-  * 96×96 (CNN Base)
-  * 224×224 (Pretrained Models)
-* Pixel normalization (0–1)
-* Data augmentation (rotation, flip, zoom, brightness)
+- Mengklasifikasikan gambar buah secara otomatis
+- Membandingkan performa model non-pretrained dan pretrained
+- Mengevaluasi model menggunakan metrik klasifikasi
+- Membangun dashboard interaktif menggunakan Streamlit
 
 ---
 
-## 🧠 MODELS USED
+## 📊 DATASET DAN PREPROCESSING
 
-### 1️⃣ CNN BASE (96×96)
+### DATASET
 
-* Built from scratch using Keras
-* Lightweight and fast training
-* Suitable for small datasets
+Dataset terdiri dari gambar buah dengan lima kelas:
+- Apple  
+- Banana  
+- Grapes  
+- Orange  
+- Strawberry  
 
-**Pros:**
+### PREPROCESSING
 
-* Fast training
-* Simple architecture
-
-**Cons:**
-
-* Lower accuracy compared to pretrained models
-
----
-
-### 2️⃣ EFFICIENTNETB0 (PRETRAINED)
-
-* Pretrained on ImageNet
-* Transfer learning applied
-
-**Pros:**
-
-* Efficient architecture
-* Potential for high accuracy
-
-**Cons:**
-
-* Poor performance due to training/preprocessing issues
-* Requires further tuning
+Tahapan preprocessing yang dilakukan:
+- Resize gambar  
+  - 96 × 96 piksel untuk CNN Base  
+  - 224 × 224 piksel untuk model pretrained  
+- Normalisasi nilai piksel ke rentang 0–1  
+- Data augmentation:
+  - Rotasi
+  - Flip horizontal
+  - Zoom
+  - Penyesuaian kecerahan
 
 ---
 
-### 3️⃣ RESNET50 (PRETRAINED)
+## 🧠 MODEL YANG DIGUNAKAN
 
-* Pretrained on ImageNet
-* Fine-tuned for fruit classification
+### 1️. CNN BASE (NON-PRETRAINED)
 
-**Pros:**
+- Dibangun dari awal (*from scratch*)
+- Arsitektur: Convolution → ReLU → MaxPooling → Flatten → Dense
+- Input gambar: 96 × 96 piksel
 
-* Highest accuracy
-* Stable and reliable performance
+**Kelebihan:**
+- Ringan dan cepat dilatih
+- Cocok untuk dataset kecil
 
-**Cons:**
-
-* Larger model size
-* Higher computational cost
-
----
-
-## 📈 MODEL PERFORMANCE
-
-| Model          | Accuracy |
-| -------------- | -------- |
-| CNN Base       | 0.90     |
-| EfficientNetB0 | 0.21     |
-| ResNet50       | **0.98** |
-
-**Conclusion:**
-ResNet50 achieves the best performance and is selected for deployment.
+**Kekurangan:**
+- Akurasi terbatas
+- Sensitif terhadap variasi gambar
 
 ---
 
-## 🖼️ TRAINING VISUALIZATION
+### 2️. PRETRAINED MODEL: EFFICIENTNETB0
+
+- Model pretrained pada ImageNet
+- Menggunakan transfer learning dan fine-tuning
+- Input gambar: 224 × 224 piksel
+
+**Kelebihan:**
+- Arsitektur efisien
+- Potensi akurasi tinggi
+
+**Kekurangan:**
+- Performa tidak optimal pada eksperimen ini
+- Perlu penyesuaian preprocessing dan training
+
+---
+
+### 3. PRETRAINED MODEL: MOBILENETV2
+
+- Model pretrained ringan dan cepat
+- Fine-tuning dilakukan pada layer akhir
+- Input gambar: 224 × 224 piksel
+
+**Kelebihan:**
+- Akurasi sangat tinggi
+- Cocok untuk aplikasi web real-time
+
+**Kekurangan:**
+- Kapasitas fitur terbatas dibanding model besar
+
+---
+
+## 📈 HASIL EVALUASI MODEL
+
+| Model | Accuracy |
+|------|----------|
+| CNN Base | 0.90 |
+| EfficientNetB0 | 0.21 |
+| MobileNetV2 | **0.98** |
+
+**Kesimpulan:**  
+MobileNetV2 memberikan performa terbaik dan dipilih sebagai model utama untuk deployment aplikasi.
+
+---
+
+## 🖼️ VISUALISASI TRAINING
 
 ### Loss & Accuracy
 
 <p align="center">
-  <img src="asets/loss_acc_cnn.png.png" width="220"/>
-  <img src="asets/loss_acc_effnet.png.png" width="220"/>
-  <img src="asets/loss_acc_resnet.png.png" width="220"/>
+  <img src="assets/loss_acc_cnn.png" width="220"/>
+  <img src="assets/loss_acc_effnet.png" width="220"/>
+  <img src="assets/loss_acc_resnet.png" width="220"/>
 </p>
 
 ### Confusion Matrix
 
 <p align="center">
-  <img src="asets/confusion_cnn.png.png" width="220"/>
-  <img src="asets/confusion_effnet.png.png" width="220"/>
-  <img src="asets/confusion_resnet.png.png" width="220"/>
+  <img src="assets/confusion_cnn.png" width="220"/>
+  <img src="assets/confusion_effnet.png" width="220"/>
+  <img src="assets/confusion_resnet.png" width="220"/>
 </p>
 
 ---
 
-## 🚀 RUN LOCALLY (STREAMLIT)
+## 🚀 MENJALANKAN APLIKASI (STREAMLIT)
 
 ### 1. Clone Repository
 
@@ -143,13 +145,13 @@ git clone https://github.com/username/fruit-image-classification.git
 cd fruit-image-classification
 ```
 
-### 2. Create Virtual Environment
+### 2. Buat Virtual Environment
 
 ```bash
 python -m venv .venv
 ```
 
-### 3. Activate Environment
+### 3. Aktivasi Environment
 
 ```bash
 # Windows
@@ -165,7 +167,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 5. Run Application
+### 5. Jalankan Aplikasi
 
 ```bash
 streamlit run app.py
@@ -175,20 +177,22 @@ streamlit run app.py
 
 ## 🌐 LIVE DEMO
 
-👉 [LINK-DASHBOARD_FRUIT_IMAGE_CLASSIFICATION](https://fruit-image-classification-raq749yzbxxknmpnc9gwfl.streamlit.app/)
+[LINK-DASHBOARD_FRUIT_IMAGE_CLASSIFICATION](https://fruit-image-classification-raq749yzbxxknmpnc9gwfl.streamlit.app/)
 
 ---
 
 ## 👤 AUTHOR
 
-**Name:** Revinda Visma Novatalia
-**Student ID:** 202210370311176
-**Program:** Informatics Engineering
-**University:** Universitas Muhammadiyah Malang
+**NAMA:** 
+Revinda Visma Novatalia
+
+**NIM :** 
+202210370311176
+
+**PRODI:** 
+Teknik Informatika - Universitas Muhammadiyah Malang
+
+**DATASET:** 
+[LINK-DATASET](https://www.kaggle.com/datasets/ismail703/fruits)
 
 ---
-
-## 📄 VERSION
-
-* Version: **1.0**
-* Last Update: **December 2025**
