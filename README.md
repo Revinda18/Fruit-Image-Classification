@@ -1,7 +1,7 @@
 # FRUIT IMAGE CLASSIFICATION 🍎🍌🍇
 
 <p align="center">
-  <img src="asets/fruit_banner.png.png" alt="Fruit Banner" width="400"/>
+  <img src="assets/fruit_banner.png" alt="Fruit Banner" width="400"/>
 </p>
 
 ---
@@ -121,17 +121,17 @@ MobileNetV2 memberikan performa terbaik dan dipilih sebagai model utama untuk de
 ### Loss & Accuracy
 
 <p align="center">
-  <img src="assets/loss_acc_cnn.png.png" width="220"/>
-  <img src="assets/loss_acc_effnet.png.png" width="220"/>
-  <img src="assets/loss_acc_resnet.png.png" width="220"/>
+  <img src="assets/loss_acc_cnn.png" width="220"/>
+  <img src="assets/loss_acc_effnet.png" width="220"/>
+  <img src="assets/loss_acc_resnet.png" width="220"/>
 </p>
 
 ### Confusion Matrix
 
 <p align="center">
-  <img src="assets/confusion_cnn.png.png" width="220"/>
-  <img src="assets/confusion_effnet.png.png" width="220"/>
-  <img src="assets/confusion_resnet.png.png" width="220"/>
+  <img src="assets/confusion_cnn.png" width="220"/>
+  <img src="assets/confusion_effnet.png width="220"/>
+  <img src="assets/confusion_resnet.png" width="220"/>
 </p>
 
 ---
