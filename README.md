@@ -130,7 +130,7 @@ MobileNetV2 memberikan performa terbaik dan dipilih sebagai model utama untuk de
 
 <p align="center">
   <img src="assets/confusion_cnn.png" width="220"/>
-  <img src="assets/confusion_effnet.png width="220"/>
+  <img src="assets/confusion_effnet.png" width="220"/>
   <img src="assets/confusion_mobilevnet.png" width="220"/>
 </p>
 
