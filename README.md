@@ -105,9 +105,11 @@ Tahapan preprocessing yang dilakukan:
 
 ## 📈 HASIL EVALUASI MODEL
 
-| Model | Accuracy |
+Evaluasi performa dilakukan menggunakan data uji (test set) untuk mengukur kemampuan generalisasi masing-masing model dalam mengklasifikasikan gambar buah ke dalam lima kelas, yaitu Apple, Banana, Grapes, Orange, dan Strawberry. Metrik utama yang digunakan pada evaluasi ini adalah accuracy, yaitu perbandingan antara jumlah prediksi yang benar terhadap total data uji
+
+| Model | Accuracy | Analisis Hasil |
 |------|----------|
-| CNN Base | 0.90 |
+| CNN Base | 0.90 | Model CNN yang dibangun dari awal mampu mengklasifikasikan gambar buah dengan cukup baik. Namun, keterbatasan arsitektur menyebabkan model kurang optimal dalam menangkap variasi fitur kompleks seperti perbedaan bentuk, tekstur, dan pencahayaan. |
 | EfficientNetB0 | 0.21 |
 | MobileNetV2 | **0.98** |
 
