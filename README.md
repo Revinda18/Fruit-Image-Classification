@@ -76,7 +76,7 @@ Tahapan preprocessing yang dilakukan:
 
 - Model pretrained pada ImageNet
 - Menggunakan transfer learning dan fine-tuning
-- Input gambar: 224 × 224 piksel
+- Input gambar: 96 x 96 piksel
 
 **Kelebihan:**
 - Arsitektur efisien
@@ -92,7 +92,7 @@ Tahapan preprocessing yang dilakukan:
 
 - Model pretrained ringan dan cepat
 - Fine-tuning dilakukan pada layer akhir
-- Input gambar: 224 × 224 piksel
+- Input gambar: 96 × 96 piksel
 
 **Kelebihan:**
 - Akurasi sangat tinggi
