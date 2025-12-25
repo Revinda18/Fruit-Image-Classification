@@ -200,8 +200,8 @@ Fitur Utama Dashboard
 5). Prediksi real-time menggunakan model terlatih
 
 <p align="center">
-  <img src="assets/website(1).png" width="220"/>
-  <img src="assets/website(3).png" width="220"/>
+  <img src="assets/website (1).png" width="220"/>
+  <img src="assets/website (3).png" width="220"/>
 </p>
 
 ---
