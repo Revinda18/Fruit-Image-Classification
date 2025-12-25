@@ -107,14 +107,14 @@ Tahapan preprocessing yang dilakukan:
 
 Evaluasi performa dilakukan menggunakan data uji (test set) untuk mengukur kemampuan generalisasi masing-masing model dalam mengklasifikasikan gambar buah ke dalam lima kelas, yaitu Apple, Banana, Grapes, Orange, dan Strawberry. Metrik utama yang digunakan pada evaluasi ini adalah accuracy, yaitu perbandingan antara jumlah prediksi yang benar terhadap total data uji
 
-| Model | Accuracy | Analisis Hasil |
-|------|----------|
-| CNN Base | 0.90 | Model CNN yang dibangun dari awal mampu mengklasifikasikan gambar buah dengan cukup baik. Namun, keterbatasan arsitektur menyebabkan model kurang optimal dalam menangkap variasi fitur kompleks seperti perbedaan bentuk, tekstur, dan pencahayaan. |
-| EfficientNetB0 | 0.21 |
-| MobileNetV2 | **0.98** |
+| Model | Accuracy | Analisis |
+|------|----------|----------|
+| CNN Base | 0.90 | Model CNN yang dibuat dari awal sudah bisa mengklasifikasikan gambar buah dengan cukup baik. Namun karena arsitekturnya masih sederhana, model ini kurang maksimal dalam mengenali perbedaan detail gambar seperti bentuk, tekstur, dan kondisi pencahayaan yang beragam. |
+| EfficientNetB0 | 0.21 | Model ini memiliki performa yang rendah karena belum dapat menyesuaikan diri dengan dataset buah yang digunakan. Hal ini kemungkinan terjadi karena proses fine-tuning belum optimal, perbedaan karakteristik dataset ImageNet dengan dataset buah, serta jumlah data latih yang terbatas. |
+| MobileNetV2 | **0.98** | Model ini memberikan hasil terbaik dengan akurasi paling tinggi. Arsitekturnya yang ringan dan efisien membantu model mengekstraksi fitur penting dengan baik, sehingga hasil prediksi lebih stabil dan cocok digunakan pada aplikasi web secara real-time.|
 
 **Kesimpulan:**  
-MobileNetV2 memberikan performa terbaik dan dipilih sebagai model utama untuk deployment aplikasi.
+Berdasarkan hasil evaluasi, MobileNetV2 menjadi model dengan performa terbaik karena memiliki akurasi paling tinggi dan hasil prediksi yang paling stabil. Model CNN Base sudah cukup baik untuk klasifikasi dasar, tetapi masih memiliki keterbatasan dalam mengenali detail gambar yang beragam. Sementara itu, EfficientNetB0 menunjukkan performa paling rendah karena belum mampu menyesuaikan diri dengan dataset yang digunakan. Oleh karena itu, MobileNetV2 dipilih sebagai model utama untuk digunakan pada aplikasi web klasifikasi gambar buah.
 
 ---
 
