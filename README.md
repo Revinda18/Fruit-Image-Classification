@@ -186,7 +186,7 @@ streamlit run app.py
 
 Aplikasi wdahsboard dibangun menggunakan Streamlit untuk melakukan klasifikasi gambar buah secara interaktif dengan opsi pemilihan model.
 
-FITUR UTAMA DASHBOARD:
+### FITUR UTAMA DASHBOARD:
 
 ### 1. Upload Gambar
 Pengguna dapat mengunggah gambar buah dengan format JPG atau PNG.
