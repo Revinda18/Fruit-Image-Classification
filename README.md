@@ -186,7 +186,7 @@ streamlit run app.py
 ## 🖥️ TAMPILAN DASHBOARD STREAMLIT
 
 
-Aplikasi wdahsboard dibangun menggunakan Streamlit untuk melakukan klasifikasi gambar buah secara interaktif dengan opsi pemilihan model.
+Aplikasi dashboarddibangun menggunakan Streamlit untuk melakukan klasifikasi gambar buah secara interaktif dengan opsi pemilihan model.
 
 ### FITUR UTAMA DASHBOARD:
 
