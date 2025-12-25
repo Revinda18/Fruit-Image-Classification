@@ -183,21 +183,33 @@ streamlit run app.py
 
 ## 🖥️ TAMPILAN DASHBOARD STREAMLIT
 
-Aplikasi web dibangun menggunakan Streamlit yang memungkinkan pengguna melakukan klasifikasi gambar buah secara interaktif dengan opsi pemilihan model deep learning.
 
-Fitur Utama Dashboard
-1). Upload gambar buah (JPG / PNG)
-2). Pilih model klasifikasi:
-    - CNN Base (Non-Pretrained)
-    - EfficientNetB0 (Pretrained)
-    - MobileNetV2 (Pretrained)
-    - Semua Model (Perbandingan)
-3). Menampilkan hasil prediksi berupa:
-    - Nama kelas buah
-    - Nilai probabilitas (confidence score)
-    - Model yang digunakan
-4). Visualisasi distribusi probabilitas kelas
-5). Prediksi real-time menggunakan model terlatih
+Aplikasi wdahsboard dibangun menggunakan Streamlit untuk melakukan klasifikasi gambar buah secara interaktif dengan opsi pemilihan model.
+
+FITUR UTAMA DASHBOARD:
+
+### 1. Upload Gambar
+Pengguna dapat mengunggah gambar buah dengan format JPG atau PNG.
+
+### 2. Pemilihan Model Klasifikasi
+Dashboard menyediakan beberapa pilihan model:
+- CNN Base (Non-Pretrained)
+- EfficientNetB0 (Pretrained)
+- MobileNetV2 (Pretrained)
+- Semua Model (perbandingan hasil prediksi)
+
+### 3. Hasil Prediksi
+Sistem menampilkan:
+- Nama kelas buah hasil prediksi
+- Nilai probabilitas (confidence score) dalam bentuk persentase (%)
+- Informasi model yang digunakan
+
+### 4. Visualisasi Distribusi Probabilitas Kelas
+Grafik distribusi probabilitas tiap kelas buah untuk membantu interpretasi hasil prediksi.
+
+### 5. Prediksi Real-Time
+Prediksi dilakukan secara real-time menggunakan model yang telah dilatih.
+
 
 <p align="center">
   <img src="assets/website (1).png" width="220"/>
