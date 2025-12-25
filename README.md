@@ -110,7 +110,7 @@ Evaluasi performa dilakukan menggunakan data uji (test set) untuk mengukur kemam
 | Model | Accuracy | Analisis |
 |------|----------|----------|
 | CNN Base | 0.90 | Model CNN yang dibuat dari awal sudah bisa mengklasifikasikan gambar buah dengan cukup baik. Namun karena arsitekturnya masih sederhana, model ini kurang maksimal dalam mengenali perbedaan detail gambar seperti bentuk, tekstur, dan kondisi pencahayaan yang beragam. |
-| EfficientNetB0 | 0.21 | Model ini memiliki performa yang rendah karena belum dapat menyesuaikan diri dengan dataset buah yang digunakan. Hal ini kemungkinan terjadi karena proses fine-tuning belum optimal, perbedaan karakteristik dataset ImageNet dengan dataset buah, serta jumlah data latih yang terbatas. |
+| EfficientNetB0 | 0.19 | Model ini memiliki performa yang rendah karena belum dapat menyesuaikan diri dengan dataset buah yang digunakan. Hal ini kemungkinan terjadi karena proses fine-tuning belum optimal, perbedaan karakteristik dataset ImageNet dengan dataset buah, serta jumlah data latih yang terbatas. |
 | MobileNetV2 | **0.98** | Model ini memberikan hasil terbaik dengan akurasi paling tinggi. Arsitekturnya yang ringan dan efisien membantu model mengekstraksi fitur penting dengan baik, sehingga hasil prediksi lebih stabil dan cocok digunakan pada aplikasi web secara real-time.|
 
 **Kesimpulan:**  
