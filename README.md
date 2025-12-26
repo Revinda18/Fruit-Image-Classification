@@ -214,7 +214,7 @@ Prediksi dilakukan secara real-time menggunakan model yang telah dilatih.
 
 <p align="center">
   <img src="assets/dashboard(1).png" width="220"/>
-  <img src="assets/dahsboard(2).png" width="220"/>
+  <img src="assets/dashboard(2).png" width="220"/>
   <img src="assets/dashboard(3).png" width="220"/>
 </p>
 
