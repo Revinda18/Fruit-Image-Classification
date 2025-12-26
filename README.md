@@ -110,12 +110,11 @@ Evaluasi performa dilakukan menggunakan data uji (test set) untuk mengukur kemam
 | Model | Accuracy | Analisis |
 |------|----------|----------|
 | CNN Base | 0.90 | Model CNN yang dibuat dari awal sudah bisa mengklasifikasikan gambar buah dengan cukup baik. Namun karena arsitekturnya masih sederhana, model ini kurang maksimal dalam mengenali perbedaan detail gambar seperti bentuk, tekstur, dan kondisi pencahayaan yang beragam. |
-| EfficientNetB0 | 0.19 | Model ini memiliki performa yang rendah karena belum dapat menyesuaikan diri dengan dataset buah yang digunakan. Hal ini kemungkinan terjadi karena proses fine-tuning belum optimal, perbedaan karakteristik dataset ImageNet dengan dataset buah, serta jumlah data latih yang terbatas. |
+| EfficientNetB0 | 0.97| Model EfficientNetB0 menunjukkan performa yang sangat baik dengan akurasi tinggi. Pemanfaatan bobot pre-trained dari ImageNet membantu model dalam mengekstraksi fitur visual yang lebih kompleks dan relevan. Meskipun tidak mencapai akurasi tertinggi, hasil ini menunjukkan bahwa EfficientNetB0 mampu beradaptasi dengan dataset buah secara efektif, meskipun masih berpotensi ditingkatkan melalui proses fine-tuning lanjutan dan penyesuaian parameter pelatihan. |
 | MobileNetV2 | **0.98** | Model ini memberikan hasil terbaik dengan akurasi paling tinggi. Arsitekturnya yang ringan dan efisien membantu model mengekstraksi fitur penting dengan baik, sehingga hasil prediksi lebih stabil dan cocok digunakan pada aplikasi web secara real-time.|
 
 **Kesimpulan:**  
-Berdasarkan hasil evaluasi, MobileNetV2 menjadi model dengan performa terbaik karena memiliki akurasi paling tinggi dan hasil prediksi yang paling stabil. Model CNN Base sudah cukup baik untuk klasifikasi dasar, tetapi masih memiliki keterbatasan dalam mengenali detail gambar yang beragam. Sementara itu, EfficientNetB0 menunjukkan performa paling rendah karena belum mampu menyesuaikan diri dengan dataset yang digunakan. Oleh karena itu, MobileNetV2 dipilih sebagai model utama untuk digunakan pada aplikasi web klasifikasi gambar buah.
-
+EfficientNetB0 dan MobileNetV2 menunjukkan performa klasifikasi yang setara dengan akurasi sekitar 98%. Namun, MobileNetV2 lebih unggul dari sisi efisiensi komputasi dan ukuran model, sehingga lebih direkomendasikan untuk implementasi pada aplikasi web atau sistem real-time. EfficientNetB0 tetap menjadi alternatif yang baik apabila sumber daya komputasi tidak menjadi kendala.
 ---
 
 ## 🖼️ VISUALISASI TRAINING
